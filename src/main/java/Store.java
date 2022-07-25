@@ -1,0 +1,73 @@
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JCheckBox;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+import javax.swing.JList;
+import javax.swing.JSeparator;
+import java.awt.MenuItem;
+import java.awt.Panel;
+import java.awt.MenuBar;
+import java.awt.Menu;
+import java.awt.Label;
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.util.HashMap;
+import java.util.Vector;
+
+abstract class Store {
+
+    JFrame frame=new JFrame();
+    Panel[] panel={new Panel(),new Panel(),new Panel(),new Panel()};
+    Panel[] storageRoom={new Panel(),new Panel(),new Panel()};
+    MenuBar menuBar=new MenuBar();
+    Menu[] menu={new Menu("File"),new Menu("Edit"),new Menu("Window")};
+    MenuItem[] file={new MenuItem("Open files"),new MenuItem("Create Table"),new MenuItem("Exit")};
+    JPanel[] centerView={new JPanel(),new JPanel(),new JPanel()};
+    JLabel[] frontLabel={new JLabel("Time Table generator"),new JLabel("create table"),new JLabel("folder"),new JLabel("files"),new JLabel()};
+    JLabel[] view={new JLabel(),new JLabel(),new JLabel(),new JLabel()};
+    JPanel pane=new JPanel();
+    JPanel[] tableView={new JPanel(),new JPanel(),new JPanel(),new JPanel()};
+    String[] vtColumn={"Lecturer","course","periods"};
+    JTable validateTable;
+    JScrollPane scroll;
+    JLabel[] TableViewLeftDataLabel={new JLabel("DEPARTMENT"),new JLabel("TABLE DESCRIPTION"),
+            new JLabel("REMARK & SIGNATURE")};
+    JTextArea[] TableViewLeftDataTextField={new JTextArea(),new JTextArea(),new JTextArea()};
+    JCheckBox[] checkBoxes=new JCheckBox[7];
+    String[] checkBoxesItem={"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+    String[] cbi={"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
+    JCheckBox[] cb=new JCheckBox[7];
+    int y,xx;
+    String[] selection={"1","2","3","4","5","6","7","8","9","10","11","12"};
+    JComboBox daysCombo=new JComboBox();
+    JButton button=new JButton("...");
+    Panel dialog=new Panel();
+    Label[] dialogLabel={new Label("TIME PER DAY"),new Label("MINUTE PER PERIOD"),new Label("DAYS OF THE WEEK"),};
+    JComboBox[] dialogComboBox={new JComboBox(),new JComboBox(),new JComboBox(),new JComboBox(),new JComboBox(),new JComboBox(),new JComboBox(),new JComboBox()};
+    Checkbox[] confirm={new Checkbox(),new Checkbox()};
+    JTextField[] dialogTextField={new JTextField(),new JTextField()};
+    JSeparator  seperator=new JSeparator();
+    Button dialogButton=new Button("Apply");
+    JPanel vtPane=new JPanel();
+    Button[] vtSouthButton={new Button("Table view"),new Button("Create table"),new Button("Reset Table")};
+    String[][] vtdata=new String[40][3];
+    String[] tableColumItem={"---"};
+    String[][] tableData=new String[1][1];
+    JTable table;
+    JScrollPane tableScroll=new JScrollPane(table);
+    JPanel tableSouth=new JPanel();
+    Button tableSouthButton=new Button("Data View");
+    Button saveButton=new Button("Save");
+    Panel select=new Panel();
+    JList listJ=new JList();
+    JTable savedTable;
+    JScrollPane savedTableScroll=new JScrollPane(savedTable);
+    HashMap<Integer,String> hm=new HashMap<>();
+
+}
